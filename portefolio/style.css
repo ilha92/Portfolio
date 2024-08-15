@@ -1,0 +1,355 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  max-width: 1200px;
+}
+
+/*Navbar*/
+header {
+  background-color: #1f1f1f;
+  padding: 20px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  color: #00ffff;
+}
+
+header p {
+  margin: 5px 0;
+  font-size: 1.2em;
+  color: #cccccc;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 20px 0 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.dark-section {
+  background-color: #1f1f1f;
+  padding: 40px 0;
+}
+
+.dark-section h2 {
+  color: #00ffff;
+  text-align: center;
+  font-size: 2.2em;
+  margin-bottom: 20px;
+}
+
+.dark-section p {
+  text-align: center;
+  font-size: 1.1em;
+  color: #bbbbbb;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.skill {
+  text-align: center;
+  width: 30%;
+}
+
+.skill i {
+  font-size: 2.5em;
+  color: #00ffff;
+  margin-bottom: 10px;
+}
+
+.skill h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.project,
+.blog {
+  background-color: #2a2a2a;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.project h3,
+.blog h3 {
+  color: #00ffff;
+  margin-top: 0;
+}
+
+.project p,
+.blog p {
+  color: #bbbbbb;
+}
+
+a {
+  color: #00ffff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #1f1f1f;
+  color: #bbbbbb;
+}
+
+/* Style pour la carte de profil */
+.profile-card {
+  display: flex;
+  align-items: center;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  margin: 20px;
+}
+
+.profile-image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #444;
+}
+
+.profile-info {
+  margin-left: 20px;
+  text-align: left;
+}
+
+.profile-info h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.profile-info h1 span {
+  display: block;
+  font-size: 1.5em;
+  font-weight: normal;
+  margin-top: 10px;
+  color: #00ffff;
+}
+
+.profile-info p {
+  font-size: 1.2em;
+  color: #aaa;
+  margin-top: 10px;
+}
+
+/* img */
+
+.profile-images img {
+  display: flex;
+  width: 40px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #444;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-info {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  header p {
+    font-size: 1em;
+  }
+
+  .profile-image img {
+    width: 220px;
+    height: 210px;
+  }
+
+  .profile-info h1 {
+    font-size: 2em;
+  }
+
+  .profile-info h1 span {
+    font-size: 1.2em;
+  }
+
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill {
+    width: 90%;
+  }
+
+  .dark-section h2 {
+    font-size: 1.8em;
+  }
+
+  .project,
+  .blog {
+    padding: 15px;
+    font-size: 0.9em;
+  }
+
+  .project h3,
+  .blog h3 {
+    font-size: 1.5em;
+  }
+}
+.project-title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.project-title h3 {
+  margin-right: 15px;
+  display: inline-block;
+  line-height: 1.5;
+}
+
+.title-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #444;
+  margin-top: 2px;
+}
+
+/*Bouton + vue */
+
+.interaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+#like-btn {
+  background-color: #00ffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #121212;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#like-btn.liked {
+  background-color: #ff0077;
+}
+
+#like-btn:hover {
+  background-color: #00cccc;
+}
+
+#view-count {
+  color: #bbbbbb;
+  font-size: 1em;
+}
+
+#like-count {
+  margin-left: 5px;
+}
+
+/*contact*/
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center; /* Aligne le texte et l'icône verticalement */
+  background-color: #0d71b8;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #443737;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-btn a {
+  color: #121212;
+  text-decoration: none;
+}
+
+.contact-btn:hover {
+  background-color: #1dc6a4;
+}
+
+.like-counts {
+  margin-left: 10px;
+}

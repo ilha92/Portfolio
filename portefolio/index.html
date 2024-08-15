@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Ilias Hamel</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+<script>
+let likeCount = parseInt(localStorage.getItem("likeCount")) || 0;
+let liked = JSON.parse(localStorage.getItem("likedBlog")) || false;
+let viewCount = parseInt(localStorage.getItem("viewCount")) || 0;
+
+function toggleLike() {
+  liked = !liked;
+  likeCount += liked ? 1 : -1;
+  document.getElementById("like-btn").classList.toggle("liked", liked);
+  document.getElementById("like-count").textContent = likeCount;
+  localStorage.setItem("likedBlog", liked);
+  localStorage.setItem("likeCount", likeCount);
+}
+
+function incrementViewCount() {
+  if (!localStorage.getItem("viewedBlog")) {
+    localStorage.setItem("viewedBlog", true);
+    localStorage.setItem("viewCount", ++viewCount);
+  }
+  document.getElementById("views").textContent = viewCount;
+}
+
+window.onload = function () {
+  document.getElementById("like-btn").classList.toggle("liked", liked);
+  document.getElementById("like-count").textContent = likeCount;
+  incrementViewCount();
+};
+</script>
+
+  <body>
+    <header>
+      <div class="container">
+        <h1>Ilias Hamel</h1>
+        <p>Développeur Web et Mobile</p>
+        <nav>
+          <ul>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#skills">Compétences</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#blogs">Blogs</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://www.canva.com/design/DAF6zNvJHRw/UUm4Giu0eSN0YT8FLEMzpw/view?
+                utm_content=DAF6zNvJHRw&utm_campaign=designshare&utm_medium=link&utm_source=editor"target="_blank">Mon CV</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="profile-card">
+        <div class="profile-image">
+            <img src="img/ilias1.jpg" alt="Ilias Hamel">
+        </div>
+        <div class="profile-info">
+            <h1>FULL STACK <span>DEVELOPER</span></h1>
+            <p>Sensible au Backend</p>
+        </div>
+    </div>
+    <section id="about" class="dark-section">
+      <div class="container">
+        <h2>À propos de moi</h2>
+        <p>
+          Je suis un développeur web et mobile avec une expertise en HTML, CSS,
+          PHP, JavaScript, React Native, et C#.
+        </p>
+        <p>
+        Actuellement en Bachelor en Informatique à l' ESGI-Paris
+        </p>
+        <p>j'ai obtenu une certification de niveau 5 (bac +2) professionnelle de développeur web et mobile à Doranco en 2023.</p>
+      </div>
+    </section>
+    <section id="skills" class="dark-section">
+      <div class="container">
+        <h2>Compétences</h2>
+        <div class="skills-container">
+          <div class="skill">
+            <i class="fas fa-code"></i>
+            <h3>Développement Web</h3>
+            <p>HTML, CSS, JavaScript, PHP</p>
+          </div>
+          <div class="skill">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>Développement Mobile</h3>
+            <p>React Native, C#</p>
+          </div>
+          <div class="skill">
+            <i class="fas fa-database"></i>
+            <h3>Base de Données</h3>
+            <p>MSQL, Maria DB</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="dark-section">
+      <div class="container">
+        <h2>Projets</h2>
+        <div class="project">
+          <h3>
+            Création d'un site web e-commerce : 05/2023 - 06/2023
+            <img src="img/panier.ico" alt="" />
+          </h3>
+          <p>
+            Développement d'un site web pour une pizzeria avec gestion des
+            commandes en ligne, interfaces frontend et backend.
+            <a href="https://1drv.ms/p/s!AgPOtaMWrl5AkU8ieHIRcKkngAbT?e=tyvkb3" target="_blank"
+              >Voir le projet</a
+            >
+          </p>
+          <ul>
+            <li>
+              Réalisation d'une plaquette commerciale, logo, affiches
+              publicitaires
+            </li>
+            <br />
+            <li>
+              Gestion administration, site web, réseaux sociaux, publipostages
+            </li>
+          </ul>
+        </div>
+        <div class="project">
+            <div class="project-title">
+              <h3>Adaptation d'un outil médical : 03/2022 - 05/2022</h3>
+              <img src="img/siteon15.jpg" class="title-image" alt="Image du projet">
+            </div>
+            <p>
+              Programmation robotique d'un compteur de balles à 3 niveaux pour usage médical, avec affichage précis des résultats.
+            </p>
+            <ul>
+              <li>Programmation robotique d'un compteur de balles à 3 niveaux.</li>
+              <br />
+              <li>Objectif : Affichage du compteur et du score par calcul précis des balles réussies.</li>
+              <br />
+              <li>Application des compétences en programmation pour une utilisation médicale enrichissante.</li>
+            </ul>
+        </div>
+        <div class="project">
+            <div class="project-title">
+            <h3>Développeur web et mobile :  03/2023 - 04/2023 - 04/2024 - 07/2024</h3>
+            <img src="img/m10-driver.png"class="title-image">
+            </div>
+            <p>
+              Programmation de site e-commerce en no code avec Wordpress et en code html, css, php
+            </p>
+            <ul>
+              <li>
+                Développement d'interfaces web, frontend et backend.
+              </li>
+              <br />
+              <li>
+                Codage avec les langages de programmation HTML, CSS, JavaScript et PHP
+              </li>
+              <br />
+              <li>
+                Gestion de la base de données des informations utilisateurs..
+              </li>
+              <br>
+              <li>Correction des erreurs de code sur le site.</li>
+            </ul>
+      </div>
+    </section>
+
+    <section id="blogs" class="dark-section">
+      <div class="container">
+        <h2>Blogs</h2>
+    
+        <div class="blog">
+          <h3>Projet Annuel en Équipe : Développement d'un Site de Musculation</h3>
+          <p>
+            Actuellement, je travaille sur un projet ambitieux en collaboration avec deux autres développeurs dans le cadre de notre formation. Ensemble, nous développons un site internet dédié à la musculation. Ce projet a pour but de fournir une plateforme complète pour les passionnés de sport, incluant des programmes d'entraînement personnalisés, des conseils nutritionnels, et une communauté active.
+          </p>
+          <p>
+            Notre objectif est de finaliser ce projet avant la fin de l'année et de le présenter à un jury composé de développeurs seniors. Cette présentation sera l'occasion de démontrer nos compétences en développement web, design UX/UI, et gestion de projet.
+          </p>
+          <p>
+            Le travail en équipe est un élément clé de ce projet. Nous collaborons étroitement pour définir les fonctionnalités, partager les tâches, et résoudre les problèmes techniques qui surviennent. Ce projet est une véritable opportunité de mettre en pratique nos connaissances et de renforcer notre capacité à travailler ensemble dans un environnement professionnel.
+          </p>
+          <p>
+            Restez connectés pour suivre notre progression et découvrir le site en avant-première une fois terminé !
+          </p>
+          <div class="interaction">
+            <button id="like-btn" onclick="toggleLike()">👍 <span id="like-count">0</span></button>
+            <span id="view-count">Vues : <span id="views">0</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="dark-section">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>
+          Disponible pour une alternance dans le domaine de l'informatique.
+          Contactez-moi via:
+        </p>
+        <br />
+        <div class="contact-buttons">
+          <button class="contact-btn" onclick="toggleLikes()">
+            <a href="mailto:iliashamel041@gmail.com">Email : iliashamel041@gmail.com</a><span class="like-counts"></span>
+          </button>
+          <button class="contact-btn" onclick="toggleLikes()">
+            <a href="tel:+33768377522">Téléphone : 07 68 37 75 22</a><span class="like-counts"></span>
+          </button>
+          <button class="contact-btn" onclick="toggleLikes()">
+            <a href="https://www.linkedin.com/in/ilias-hamel-4b7054254/" target="_blank">LinkedIn : Mon profil LinkedIn</a><span class="like-counts"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>&copy; 2024 Ilias Hamel - Tous droits réservés.</p>
+    </footer>
+  </body>
+</html>
